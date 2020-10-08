@@ -18,8 +18,8 @@ def face_extraction(img):
         return None
     
     for (x,y,w,h) in faces:
-        x=x-10
-        y=y-10
+        x=x-30
+        y=y-30
         cropped_face=img[y:y+h+50,x:x+w+50]
     
     return cropped_face
@@ -42,7 +42,7 @@ while True:
     else:
         print("Face not found")
         pass
-    if cv2.waitKey(1)==13 or count==100:#13 is enter key
+    if cv2.waitKey(1)==13 or count==50:#13 is enter key
         break
 cap.release()
 cv2.destroyAllWindows()
